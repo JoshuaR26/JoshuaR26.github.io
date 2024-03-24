@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">
+        <div class="card">
+            <button id="butn1" class=""button" onmouseover="myHover()" onmouseout="myUnhover()"  onclick="myAlert()">Your Mom</button>
+            <button id="butn2" class=""button" onmouseout="myUnhover()" onmouseover="myHover()" class=""button"  onclick="myFun1()">Hello There!</button>
+            <button id="butn3" class=""button" onmouseout="myUnhover()" onmouseover="myHover()"  onclick="myFun1()">Hello There!</button>
+        </div>
+    </div>
+</body>
+
+<style>
+    .container {
+        background-color: cornflowerblue;
+        padding: 30px;
+        margin:20px;
+        border-radius: 20px;
+        box-shadow: 0 0 10px rgba(0,0,0,.25);
+    }
+    .container .card {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        /* background-color: antiquewhite; */
+        gap: 20px;
+        width: auto;
+    }
+    button {
+        background-color: royalblue;
+        border-radius: 10px;
+        border-style: none;
+        color: aliceblue;
+        font-size: 20px;
+        padding: 20px;
+        width: 300px;
+        box-shadow: 0 0 10px rgba(0,0,0,.25);
+        /* transition: 0.2s ease; */
+    }
+</style>
+
+<script>
+    function myAlert() {
+        document.getElementById("butn1")
+        alert("Yo Mama is Fat");
+        document.getElementById("butn1").style.backgroundColor="midnightblue";
+    }
+    const Buttons= document.getElementsByClassName('button');
+    for (let i=0 ; i<Buttons.length ; i++) {
+        Buttons[i].addEventListener('mouseover', myHover);
+        Buttons[i].addEventListener('mouseout', myUnhover);
+    
+        function myHover() {
+            Buttons[i].style.backgroundColor="white";
+            Buttons[i].style.transition="0.2s ease";
+        }
+        function myUnhover() {
+            Buttons[i].style.backgroundColor="royalblue";
+        }
+    }
+
+    // const collection = document.getElementsByTagName("buttton")
+    // for (let i=0 ; i<collection.length ; i++) {
+    //     function
+    // }
+</script>
+</html>
